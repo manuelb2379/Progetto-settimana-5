@@ -26,51 +26,70 @@ a {
   text-decoration: none;
 }
 
-#siteHeader {
-  background-color: white;
-  color: hsl(150, 60%, 30%);
+.headerDiv,
+.footerDiv {
+  max-width: 980px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Header */
+header {
+  border-bottom: 10px solid #eee;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  position: sticky;
-}
-
-.headDestra {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
+  align-items: center;
   justify-content: center;
-  padding: 0 15px;
-  color: black;
+  padding: 20px 0;
 
-  .navList {
-    list-style-type: none;
+  .logo {
+    color: hsl(150, 60%, 30%);
+    font-weight: 800;
+    font-size: 1.5em;
+    justify-self: center;
+  }
+
+  nav {
+    width: 70%;
     display: flex;
-    li {
-      padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+
+    a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      align-self: center;
+    }
+
+    a:hover {
+      background-color: hsl(150, 60%, 95%);
+      color: hsl(150, 60%, 30%);
+    }
+
+    button {
+      background-color: transparent;
+      border: 2px solid #ccc;
+      color: #2a2a2a;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    button:hover {
+      background-color: #f8e7e7;
+      cursor: pointer;
     }
   }
-
-  .chiaroScuro {
-    align-self: center;
-  }
 }
+
 .navList li:hover,
 .btnTheme:hover {
   background-color: hsl(150, 60%, 95%);
-}
-
-/* Aggiungi qui le tue regole, mobile-first. */
-.btnTheme {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 /* body modalità scura e chiara */
@@ -120,8 +139,35 @@ section {
     margin: 16px 20px;
   }
 
-  #apriModale{
-    padding: 15px;
+  #apriModale {
+    padding: 15px 35px;
     border-radius: 25px;
+    border: none;
+    color: hsl(150, 60%, 30%);
+    font-weight: 900;
   }
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+
+  .workCard {
+    border: 1px solid rgb(244, 244, 244);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .workCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.service{
+  
 }
