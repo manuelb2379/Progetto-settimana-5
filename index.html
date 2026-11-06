@@ -1,34 +1,185 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom — Studio di design</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
 
-    <header id="site-header">
-      <!-- Logo + nav -->
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloom — Studio di design</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-    <main>
+<body>
 
-      <section class="hero">
-        <!-- Titolo, sottotitolo, bottone CTA -->
-      </section>
+  <header id="siteHeader">
+    <!-- Logo + nav -->
+    <div class="headSinistra">
+      <i class="fa-solid fa-seedling"></i>
+      <span>Bloom</span>
+    </div>
+    <div class="headDestra">
 
-      <section class="services">
-        <!-- 3 card servizi: icona + titolo + descrizione -->
-      </section>
+      <nav>
+        <div>
+          <ul class="navList">
+            <li><a href="hero"><span>Servizi</span></a></li>
+            <li><a href="services"><span>Lavori</span></a></li>
+            <li><a href="team"><span>Team</span></a></li>
+            <li><a href="modale"><span>Contatti</span></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="chiaroScuro">
+        <button id="themeToggle" class="btnTheme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
 
-    </main>
+    </div>
+  </header>
 
-    <footer id="site-footer">
-      <!-- Logo, social icons, copyright -->
-    </footer>
+  <main>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="hero">
+      <!-- Titolo, sottotitolo, bottone CTA -->
+      <div class="container">
+        <h1>Trasformiamo idee in design</h1>
+        <p>Siamo uno studio creativo. Identità visiva, web e motion graphic per
+          chi vuole farsi notare.
+        </p>
+        <button type="button" id="apriModale">Richiedi preventivo</button>
+      </div>
+
+    </section>
+
+    <section class="works">
+      <!-- 3 card servizi: icona + titolo + descrizione -->
+      <h3>I nostri lavori</h3>
+
+      <div class="workList">
+
+        <article class="work">
+          <img class="singleWork" src="assets/img/works.png" alt="singleWork">
+        </article>
+
+        <article class="work">
+          <img class="singleWork" src="assets/img/works.png" alt="singleWork">
+        </article>
+
+        <article class="work">
+          <img class="singleWork" src="assets/img/works.png" alt="singleWork">
+        </article>
+
+        <article class="work">
+          <img class="singleWork" src="assets/img/works.png" alt="singleWork">
+        </article>
+
+        <article class="work">
+          <img class="singleWork" src="assets/img/works.png" alt="singleWork">
+        </article>
+
+        <article class="work">
+          <img class="singleWork" src="assets/img/works.png" alt="singleWork">
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="services">
+
+      <h3>I nostri servizi</h3>
+
+      <div class="serviceList">
+
+        <article class="singleService">
+
+          <i class="fa-solid fa-pen-nib"></i>
+          <p><br>Identità visiva</p>
+          <p>Logo, palette, tipografia e linee guida per un brand coerente, riconoscibile e duraturo.
+          </p>
+
+        </article>
+
+        <article class="singleService">
+
+          <i class="fa-solid fa-desktop"></i>
+          <p><br>Web design</p>
+          <p>Siti vetrina e landing page responsive, accessibili e ottimizzate per dispositivi mobili.
+          </p>
+
+        </article>
+
+        <article class="singleService">
+
+          <i class="fa-solid fa-film"></i>
+          <p><br>Motion graphic</p>
+          <p>Animazioni e brevi video per raccontare il prodotto, i social e le campagne pubblicitarie.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="team">
+
+    </section>
+  </main>
+
+  <footer id="siteFooter">
+    <!-- Logo, social icons, copyright -->
+    <div>
+      <i class="fa-solid fa-seedling"></i>
+      <span>Bloom</span>
+      <p>Studio di design fondato nel 2026</p>
+    </div>
+
+    <ul class="iconFoot">
+      <li>
+        <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"><i class="fab fa-linkedin"></i></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"><i class="fa-brands fa-behance"></i></a>
+      </li>
+    </ul>
+
+    <p class="textFoot">© 2026 Bloom</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+</div>
+<nav>
+  <ul>
+    <li></li>
+  </ul>
+</nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <!-- Titolo, sottotitolo, bottone CTA -->
+  </section>
+
+  <section class="services">
+    <!-- 3 card servizi: icona + titolo + descrizione -->
+  </section>
+
+</main>
+
+<footer id="site-footer">
+  <!-- Logo, social icons, copyright -->
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+
 </html>
