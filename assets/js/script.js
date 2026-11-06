@@ -19,3 +19,17 @@ themeToggleBtn.addEventListener('click', function () {
         themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
     }
 });
+
+
+//header che cambia allo scroll
+const siteHeader = document.querySelector('#siteHeader');
+
+window.addEventListener('scroll', (e) => {
+    e.preventDefault();
+
+    if (window.scrollY > 100) { //quanti px scorre l'utente
+        siteHeader.classList.add('scrolled');
+    } else {
+        siteHeader.classList.remove('scrolled');
+    }
+});

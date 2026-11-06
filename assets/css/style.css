@@ -14,7 +14,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #1a1a1a;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 img {
@@ -30,8 +30,8 @@ a {
 /* Header */
 
 #siteHeader,
-#siteFooter{
-  max-width: 980px;/*mi serve per dare il background al footer e header in modalità scura limitata*/
+#siteFooter {
+  max-width: 980px; /*mi serve per dare il background al footer e header in modalità scura limitata*/
   margin: 0 auto;
 }
 
@@ -114,11 +114,11 @@ body.dark-mode main {
 }
 
 body.dark-mode main .section {
-  background-color: rgb(71, 71, 71); 
+  background-color: rgb(71, 71, 71);
   color: #1a1a1a;
 }
 
-body.dark-mode #siteHeader{
+body.dark-mode #siteHeader {
   background-color: #1a1a1a;
 }
 
@@ -133,7 +133,7 @@ body.dark-mode .btnTheme:hover {
 
 body.dark-mode .workCard,
 body.dark-mode .serviceCard,
-body.dark-mode .cardTeam{
+body.dark-mode .cardTeam {
   background-color: #2a2a2a;
   border-color: #3a3a3a;
   color: #f1f1f1;
@@ -144,8 +144,33 @@ body.dark-mode .cardTeam .name {
 }
 
 body.dark-mode .cardTeam .role,
-body.dark-mode .cardTeam p{
+body.dark-mode .cardTeam p {
   color: rgb(187, 187, 187);
+}
+
+/* header quando si scrolla sotto 100px*/
+#siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+#siteHeader.scrolled .logo{
+  color: white;
+}
+
+#siteHeader.scrolled .btnTheme{
+  color: white;
+  border-color: white;
+}
+
+/* stile dell'header che cambia quando gli diamo la classe .scrolled */
+#siteHeader.scrolled {
+  padding: 5px 0; /* Riduce lo spazio verticale */
+  background-color: hsl(150, 60%, 30%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* main */
@@ -156,7 +181,7 @@ main {
   color: #1a1a1a;
 }
 
-/* section */
+/* section hero e animazioni */
 
 .hero {
   padding: 0;
@@ -167,12 +192,12 @@ main {
 
 .hero h1,
 .hero p,
-.hero #apriModale{
+.hero #apriModale {
   animation: entrata 1s ease-out both;
 }
 
 /* entrano uno dopo l'altro */
-.hero h1{
+.hero h1 {
   animation-delay: 0.2s;
 }
 
@@ -187,12 +212,12 @@ main {
 /* entrata dal basso delle section hero*/
 @keyframes entrata {
   from {
-    opacity: 0;                    /* invisibile */
-    transform: translateY(30px);   /* 30px più in basso */
+    opacity: 0; /* invisibile */
+    transform: translateY(30px); /* 30px più in basso */
   }
   to {
-    opacity: 1;                    /* visibile */
-    transform: translateY(0);      /* posizione normale */
+    opacity: 1; /* visibile */
+    transform: translateY(0); /* posizione normale */
   }
 }
 .container {
@@ -220,7 +245,7 @@ section {
   padding: 50px;
 }
 
-h2{
+h2 {
   text-align: center;
   color: hsl(150, 60%, 30%);
   padding-bottom: 20px;
@@ -298,7 +323,7 @@ h2{
     border-radius: 50%;
     background-color: hsl(150, 60%, 30%);
     color: white;
-    border: 5px solid #C2F0D9;
+    border: 5px solid #c2f0d9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,58 +414,61 @@ h2{
   cursor: pointer;
 }
 
-
 @media (min-width: 768px) {
-
-  .headerDiv{
+  .headerDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  .headerDiv nav{
+  .headerDiv nav {
     width: auto;
     margin: 0;
     gap: 20px;
   }
 
-   h2{
-    flex: 0 0 100%
+  h2 {
+    flex: 0 0 100%;
   }
 
   .workList,
   .serviceList,
-  .team{
+  .team {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
   }
 
-  .workList, .serviceList, .team{
+  .workList,
+  .serviceList,
+  .team {
     justify-content: space-between;
   }
 
-  .workCard, .serviceCard, .cardTeam{
+  .workCard,
+  .serviceCard,
+  .cardTeam {
     width: 40%;
     flex-grow: 1;
   }
 
-  .footerDiv{
+  .footerDiv {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     text-align: left;
   }
 
-.paragraph{
-  margin: -10px 0;
+  .paragraph {
+    margin: -10px 0;
   }
 }
 
-@media (min-width: 992px){
-
-   .workCard, .serviceCard, .cardTeam{
+@media (min-width: 992px) {
+  .workCard,
+  .serviceCard,
+  .cardTeam {
     width: 30%;
     flex-grow: 1;
   }
@@ -449,14 +477,11 @@ h2{
 /* Media query per accessibilità: riduzione animazioni */
 
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
-
