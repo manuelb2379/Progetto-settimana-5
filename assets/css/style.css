@@ -14,6 +14,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: #1a1a1a;
+  background-color: #FAFAFA;
 }
 
 img {
@@ -35,14 +36,16 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 /* Header */
+
 header {
-  border-bottom: 10px solid #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+  background-color: white;
 
   .logo {
     color: hsl(150, 60%, 30%);
@@ -72,7 +75,7 @@ header {
 
     button {
       background-color: transparent;
-      border: 2px solid #ccc;
+      border: 1px solid #020202;
       color: #2a2a2a;
       width: 32px;
       height: 32px;
@@ -103,7 +106,12 @@ body.dark-mode main {
   color: #f1f1f1;
 }
 
-body.dark-mode main .sezione {
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode main .section {
   background-color: rgb(71, 71, 71); /*!!!!!!!!!!!!!!!!! correggi colori*/
   color: #1f1f1f;
 }
@@ -114,10 +122,6 @@ main {
   margin: 0 auto;
   background-color: #fafafa;
   color: #1a1a1a;
-}
-
-section {
-  padding: 10px;
 }
 
 .hero {
@@ -148,6 +152,16 @@ section {
   }
 }
 
+section {
+  padding: 50px;
+}
+
+h2{
+  text-align: center;
+  color: hsl(150, 60%, 30%);
+  padding-bottom: 20px;
+}
+
 .workList {
   display: flex;
   flex-direction: column;
@@ -162,12 +176,208 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
-  .workCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  .singleWork {
+    padding: 50px 20px;
   }
 }
 
-.service{
-  
+.serviceList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+
+  .serviceCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-grow: 1;
+    border: 1px solid rgb(244, 244, 244);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+    i {
+      color: hsl(150, 60%, 30%);
+      font-size: 2rem;
+      padding-top: 30px;
+    }
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+.cardTeam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px solid rgb(244, 244, 244);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+
+  .picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: hsl(150, 60%, 30%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px;
+  }
+
+  .name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #121212;
+    margin: 0 0 4px 0;
+  }
+
+  .role {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(150, 60%, 30%);
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+/*hover sulle card delle 3 section*/
+.workCard:hover,
+.serviceCard:hover,
+.cardTeam:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* footer */
+
+#siteFooter {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 40px;
+}
+
+.footerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  color: hsl(150, 60%, 30%);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.iconFoot {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.iconFoot li {
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  line-height: 2.1;
+}
+
+.iconFoot li a {
+  color: white;
+  text-decoration: none;
+}
+
+.iconFoot li:hover {
+  background-color: hsl(150, 60%, 30%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+
+@media (min-width: 768px) {
+
+  .headerDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .headerDiv nav{
+    width: auto;
+    margin: 0;
+    gap: 20px;
+  }
+
+   h2{
+    flex: 0 0 100%
+  }
+
+  .workList,
+  .serviceList,
+  .team{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .workList, .serviceList, .team{
+    justify-content: space-between;
+  }
+
+  .workCard, .serviceCard, .cardTeam{
+    width: 40%;
+    flex-grow: 1;
+  }
+
+  .footerDiv{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+.paragraph{
+  margin: -10px 0;
+  }
+}
+
+@media (min-width: 992px){
+
+   .workCard, .serviceCard, .cardTeam{
+    width: 30%;
+    flex-grow: 1;
+  }
 }
