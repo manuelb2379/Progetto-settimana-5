@@ -27,6 +27,14 @@ a {
   text-decoration: none;
 }
 
+/* Header */
+
+#siteHeader,
+#siteFooter{
+  max-width: 980px;/*mi serve per dare il background al footer e header in modalità scura limitata*/
+  margin: 0 auto;
+}
+
 .headerDiv,
 .footerDiv {
   max-width: 980px;
@@ -36,8 +44,6 @@ a {
   padding-left: 20px;
   padding-right: 20px;
 }
-
-/* Header */
 
 header {
   display: flex;
@@ -64,8 +70,9 @@ header {
 
     a {
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 1rem;
       align-self: center;
+      padding: 10px;
     }
 
     a:hover {
@@ -106,14 +113,39 @@ body.dark-mode main {
   color: #f1f1f1;
 }
 
-body.dark-mode {
-  background-color: #1e1e1e;
+body.dark-mode main .section {
+  background-color: rgb(71, 71, 71); 
+  color: #1a1a1a;
+}
+
+body.dark-mode #siteHeader{
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .btnTheme {
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+body.dark-mode .btnTheme:hover {
+  background-color: #2a2a2a;
+}
+
+body.dark-mode .workCard,
+body.dark-mode .serviceCard,
+body.dark-mode .cardTeam{
+  background-color: #2a2a2a;
+  border-color: #3a3a3a;
   color: #f1f1f1;
 }
 
-body.dark-mode main .section {
-  background-color: rgb(71, 71, 71); /*!!!!!!!!!!!!!!!!! correggi colori*/
-  color: #1f1f1f;
+body.dark-mode .cardTeam .name {
+  color: #f1f1f1;
+}
+
+body.dark-mode .cardTeam .role,
+body.dark-mode .cardTeam p{
+  color: rgb(187, 187, 187);
 }
 
 /* main */
@@ -124,6 +156,8 @@ main {
   color: #1a1a1a;
 }
 
+/* section */
+
 .hero {
   padding: 0;
   background-color: hsl(150, 60%, 30%);
@@ -131,6 +165,36 @@ main {
   text-align: center;
 }
 
+.hero h1,
+.hero p,
+.hero #apriModale{
+  animation: entrata 1s ease-out both;
+}
+
+/* entrano uno dopo l'altro */
+.hero h1{
+  animation-delay: 0.2s;
+}
+
+.hero p {
+  animation-delay: 0.5s;
+}
+
+.hero #apriModale {
+  animation-delay: 0.8s;
+}
+
+/* entrata dal basso delle section hero*/
+@keyframes entrata {
+  from {
+    opacity: 0;                    /* invisibile */
+    transform: translateY(30px);   /* 30px più in basso */
+  }
+  to {
+    opacity: 1;                    /* visibile */
+    transform: translateY(0);      /* posizione normale */
+  }
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -234,6 +298,7 @@ h2{
     border-radius: 50%;
     background-color: hsl(150, 60%, 30%);
     color: white;
+    border: 5px solid #C2F0D9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,7 +315,6 @@ h2{
   }
 
   .role {
-    font-size: 0.8rem;
     font-weight: 700;
     color: hsl(150, 60%, 30%);
     margin-bottom: 12px;
@@ -381,3 +445,18 @@ h2{
     flex-grow: 1;
   }
 }
+
+/* Media query per accessibilità: riduzione animazioni */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
